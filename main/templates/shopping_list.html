@@ -12,8 +12,20 @@
 	<br>
 	<h2> Shopping list</h2>
 	<ul>
-
+{% if name == 'Ree' or name == 'Squ' %}
+<h3>Hi, {{name}}!</h3>
+{% else %}
+<h3>You are not Ree or Squ, you are {{name}}. <br>
+And you will die. We hope, that you will not offense.</h3>
+{% endif %}
 	</ul>
+
+
+<ul>
+	{% for item in items %}	
+		<li>{{ item }}</li>
+	{% endfor %}
+</ul>
 </body>
 </html>
 
